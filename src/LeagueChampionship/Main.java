@@ -4,9 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        League<Team> superLeague = new League<>("Super League");
+        League<EnglandTeam> superLeague = new League<>("Super League");
+
+        FrenchTeam frenchTeam = new FrenchTeam("frenchy");
+
+        BaseballPlayer Jon = new BaseballPlayer("Jon","pitch");
 
         EnglandTeam chelsea = new EnglandTeam("Chelsea");
+
+        //superLeague.addTeam(frenchTeam);
 
         EnglandTeam arsenal = new EnglandTeam("Arsenal");
 
@@ -40,7 +46,7 @@ public class Main {
 
         manchesterUnited.addLost(); arsenal.addWon();
 
-        chelsea.addWon(); arsenal.addLost();
+        chelsea.addLost(); arsenal.addWon();
 
         superLeague.printTeams();
 

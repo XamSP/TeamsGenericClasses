@@ -77,8 +77,8 @@ public class League <T extends Team>{
         // Used for sorting in ascending order of totalPoints of each team
         public int compare(T a, T b)
         {
-            System.out.println(a.getName() + " " + a.getTotalPoints() + " | " + b.getName() + " " + b.getTotalPoints());
-            return a.getWon() + b.getWon();
+            System.out.println(a.getName() + ", totalPoints = " + a.getTotalPoints() + " | " + b.getName() + ", totalPoints = " + b.getTotalPoints());
+            return a.getTotalPoints() - b.getTotalPoints();
         }
     }
 

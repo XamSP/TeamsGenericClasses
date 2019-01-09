@@ -8,7 +8,6 @@ public abstract class Team<T extends Player> {
     private int won;
     private int lost;
     private int tied;
-    private int totalPoints = (won * 2) - lost + tied;
 
     private ArrayList<T> members = new ArrayList<>();
 
@@ -29,7 +28,7 @@ public abstract class Team<T extends Player> {
     }
 
     public int getTotalPoints() {
-        return totalPoints;
+        return (this.won * 2) - this.lost + this.tied;
     }
 
     public int getPlayed() {
